@@ -123,6 +123,13 @@
   align-items: flex-start;
   margin-top: -2px;
 }
+.down {
+  transition: transform 0.3s ease-in;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+
 .features-dropdown {
   padding-left: 20px;
 }

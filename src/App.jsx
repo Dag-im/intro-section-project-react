@@ -35,11 +35,11 @@ const Navigation = () => {
             className='up-down'
             onClick={() => setIsFeaturesOpen(!isFeaturesOpen)}
           >
-            {isFeaturesOpen ? (
-              <img className='up' src={iconUp} alt='' />
-            ) : (
-              <img className='down' src={iconDown} alt='' />
-            )}
+            <img
+              className={`down ${isFeaturesOpen ? 'rotate' : ''}`}
+              src={iconDown}
+              alt=''
+            />
           </div>
         </div>
         {isFeaturesOpen && (
@@ -60,11 +60,11 @@ const Navigation = () => {
             className='up-down'
             onClick={() => setIsCompanyOpen(!isCompanyOpen)}
           >
-            {isCompanyOpen ? (
-              <img className='up' src={iconUp} alt='' />
-            ) : (
-              <img className='down' src={iconDown} alt='' />
-            )}
+            <img
+              className={`down ${isCompanyOpen ? 'rotate' : ''}`}
+              src={iconDown}
+              alt=''
+            />
           </div>
         </div>
         {isCompanyOpen && (
@@ -88,7 +88,6 @@ const Navigation = () => {
     </div>
   )
 }
-
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
